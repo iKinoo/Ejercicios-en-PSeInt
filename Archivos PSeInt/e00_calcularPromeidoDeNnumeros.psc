@@ -1,9 +1,9 @@
 Algoritmo e00_calcularPromeidoDeNnumeros
-	Definir nNum como entero // es el numero de elementos en el promedio
-	definir iterador Como Entero // es el contador del numero de elementos
-	Definir num Como real // es el numero que ingresa el usuario para promediar
-	Definir promedio Como Real // es el promedio de los numeros
-	definir suma Como Real // es la suma de los numeros
+	Definir nNum como entero // es el numero de elementos en el promedio 			// Entrada
+	definir iterador Como Entero // es el contador del numero de elementos			//
+	Definir num Como real // es el numero que ingresa el usuario para promediar 	// Entrada
+	Definir promedio Como Real // es el promedio de los numeros 					// Salida
+	definir suma Como Real // es la suma de los numeros								//
 	
 	iterador = 1
 	suma = 0
@@ -14,7 +14,7 @@ Algoritmo e00_calcularPromeidoDeNnumeros
 	Leer nNum
 	
 	Mientras iterador <= nNum Hacer
-		Escribir "Ingrese un número[",iterador,"/",nNum,"]: "
+		Escribir "Ingrese un nï¿½mero[",iterador,"/",nNum,"]: "
 		leer num
 		suma = suma + num
 		iterador = iterador + 1
