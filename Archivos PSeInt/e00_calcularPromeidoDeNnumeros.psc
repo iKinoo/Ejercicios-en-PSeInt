@@ -1,4 +1,4 @@
-Algoritmo calcularPromeidoDeNnumeros
+Algoritmo e00_calcularPromeidoDeNnumeros
 	Definir nNum como entero // es el numero de elementos en el promedio
 	definir iterador Como Entero // es el contador del numero de elementos
 	Definir num Como real // es el numero que ingresa el usuario para promediar

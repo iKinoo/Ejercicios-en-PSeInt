@@ -1,4 +1,4 @@
-Algoritmo algoritmoQueSumeNCantidad
+Algoritmo e03_algoritmoQueSumeNCantidAD
 	Definir nNum Como Real // es la cantidad de elementos de la suma // ENTRADA
 	Definir suma Como Real // es la suma de los elementos // SALIDA
 	Definir num Como Real // es el numeor que ingresa para sumarse // ENTRADA

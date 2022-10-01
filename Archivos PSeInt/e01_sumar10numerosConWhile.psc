@@ -1,4 +1,4 @@
-Algoritmo suma10cantidades
+Algoritmo e01_sumar10numerosConWhile
 	definir num como real // es el numero que ingresa el usuario
 	definir contador Como Entero // es el contador de elementos ingresados
 	Definir suma Como Real // es la  suma de los numeros
