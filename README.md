@@ -1,2 +1,2 @@
 # AlgoritmosPSeInt
-Ejercios de la clase de algoritmia en PSeInt
+Luego de mes y medio, al fin dejamos el papel y comenzamos a usar la tecnología :')'
