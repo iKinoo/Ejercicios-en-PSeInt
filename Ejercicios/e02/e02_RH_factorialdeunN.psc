@@ -1,4 +1,4 @@
-Algoritmo e02_factorialdeunN
+Algoritmo e02_RH_factorialdeunN
 	
 	Definir num como entero // Es el numero ingresado										E
 	Definir contador Como Entero // es el contador de 1 a hasta el numero ingresado

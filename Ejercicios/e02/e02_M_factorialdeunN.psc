@@ -1,4 +1,4 @@
-Algoritmo e02_factorialdeunN
+Algoritmo e02_M_factorialdeunN
 	
 	Definir num como entero // Es el numero ingresado										E
 	Definir contador Como Entero // es el contador de 1 a hasta el numero ingresado
@@ -16,6 +16,6 @@ Algoritmo e02_factorialdeunN
 				contador = contador + 1
 			FinMientras
 		FinSi
-	Imprimir factorial
+	Imprimir "el factorial de ",num," es ",factorial
 	
 FinAlgoritmo

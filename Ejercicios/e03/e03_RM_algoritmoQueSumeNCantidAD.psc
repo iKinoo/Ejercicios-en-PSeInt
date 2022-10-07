@@ -5,24 +5,16 @@ Algoritmo e03_RH_algoritmoQueSumeNCantidAD
 	definir contador Como entero // es contaor de elementos
 	
 	suma = 0
-	contador = 0
+	contador = 1
 	Leer nNum
-	Si nNum == 0 Entonces
-		Escribir "escriba un numero mayora  0"
-	SiNo
-		si-Entonces
-			
-		FinSi
-	Fin Si
 	Escribir "Iniciando suma"
 	
 	Repetir
 		Escribir "Ingrese un número[",contador,"/",nNum,"]:"
 		leer num
-		
 		suma = num + suma
 		contador = contador + 1
-	Hasta Que contador == nNum
+	Mientras que contador <= nNum
 	
 	Imprimir "La suma es: ",suma
 	
