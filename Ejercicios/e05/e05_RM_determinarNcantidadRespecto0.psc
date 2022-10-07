@@ -1,6 +1,6 @@
 // algoritmo que determine de n cantidades, cuántas son, menores que 0, cuántas son igual a 0, y cuántas son mayores a 0. 
 // HACER TRES VERSIONES
-Algoritmo e05_RM_determinarNcantidadMenoresque0
+Algoritmo e05_RM_determinarNcantidadRespecto0
 	Definir contadorTotal Como Entero // Es el contador total de los elementos que se ingresan
 	Definir contador0 como entero // Es el contador de numeros iguales a 0 											// SALIDA
 	definir contadorMenor0 Como Entero // Es el contador de numeros menores que 0 									// SALIDA
