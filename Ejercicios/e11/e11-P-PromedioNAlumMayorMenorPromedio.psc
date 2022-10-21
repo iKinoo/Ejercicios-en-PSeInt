@@ -3,17 +3,16 @@
 
 Algoritmo sin_titulo
 	
-	Definir nEstudiantes Como Entero
-	Definir examenes Como Entero // 4 examenes
-	Definir promedio Como Real // el promedio de los 4 examenes
-	Definir puntaje Como Real // es el puntaje de cada examen
-	Definir mayorPromedio Como Real // el mayor promedio
-	Definir menorPomedio Como Real // el menor promedio
+	Definir nEstudiantes Como Entero // es el número de estudiantes // ENTRADA
+	Definir promedio Como Real // el promedio de los 4 examenes // SALIDA
+	Definir puntaje Como Real // es el puntaje de cada examen //  ENTRADA
+	Definir mayorPromedio Como Real // el mayor promedio // SALIDA
+	Definir menorPomedio Como Real // el menor promedio // SALIDA
 	
-	Definir i Como Entero
-	Definir j Como Entero
+	Definir i Como Entero // iterador
+	Definir j Como Entero // iterador anidado
 	
-	Definir sumaPuntaje Como Real
+	Definir sumaPuntaje Como Real // Es la suma de los 4 exámenes
 	
 	Escribir "Ingrese el número de estudiantes"
 	leer nEstudiantes

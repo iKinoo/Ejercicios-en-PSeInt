@@ -1,0 +1,111 @@
+<HTML><HEAD>
+	<TITLE>e14-RH-CADENASucurslaes.psc</TITLE>
+	<STYLE type="text/css">
+		.SSD { color:#FFFFFF; background-color:#000000; }
+		.SS0 { color:#000000; background-color:#FFFFFF; }
+		.SS1 { color:#000000; background-color:#FFFFFF; }
+		.SS2 { font-style: italic; color:#969696; background-color:#FFFFFF; }
+		.SS3 { font-style: italic; color:#0000FF; background-color:#FFFFFF; }
+		.SS4 { color:#8E6B23; background-color:#FFFFFF; }
+		.SS5 { font-weight: bold; color:#000080; background-color:#FFFFFF; }
+		.SS6 { color:#FF0000; background-color:#FFFFFF; }
+		.SS7 { color:#FF0000; background-color:#FFFFFF; }
+		.SS8 { color:#DB70DB; background-color:#FFFFFF; }
+		.SS9 { color:#238E23; background-color:#FFFFFF; }
+		.SS10 { font-weight: bold; color:#000000; background-color:#FFFFFF; }
+		.SS11 { color:#000000; background-color:#FFFFFF; }
+		.SS12 { color:#FF0000; background-color:#F0F0F0; }
+		.SS13 { color:#000000; background-color:#FFFFFF; }
+		.SS14 { color:#DB70DB; background-color:#FFFFFF; }
+		.SS15 { color:#238E23; background-color:#FFFFFF; }
+		.SS16 { color:#000080; background-color:#FFFFFF; }
+		.SS17 { color:#42426F; background-color:#FFFFFF; }
+		.SS18 { color:#FF0000; background-color:#FFFFFF; }
+		.SS19 { color:#000000; background-color:#BFD8D8; }
+		.SS34 { font-weight: bold; color:#FF0000; background-color:#F0F0FF; }
+		.SS35 { font-weight: bold; color:#800000; background-color:#FFFFFF; }
+	</STYLE>
+</HEAD><BODY><PRE>
+<SPAN class="SS2">// Una cadena de tiendas cuenta con sucursales en C ciudades diferentes de la República, </SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS2">// en cada ciudad cuenta con T tiendas y cada tienda cuenta con N empleados, asimismo, </SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS2">// cada una registra lo que vende de manera individual cada empleado, cuánto fue lo que </SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS2">// vendió cada tienda, cuánto se vendió en cada ciudad y cuánto recaudó la cadena en un </SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS2">// solo día. Realice un algoritmo para que registre y calcule lo anterior</SPAN><SPAN class="SS0">
+
+</SPAN><SPAN class="SS5">Algoritmo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">CadenaSucursalesN</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nCiudades</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">//     Es la cantidad de ciudades en la que se encuentra la cadena // ENTRADA</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nTiendas</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Es la cantidad de tiendas por ciudad // ENTRADA</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nEmpleados</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Es la cantidad de empleados por tienda // ENTRADA</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaCiudad</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Real</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Es la ganancia generada por ciudad // SALIDA</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaTienda</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Real</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Es la ganancia generada por tienda // SALIDA</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaEmpleado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Real</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Es la venta generada por empleado // SALIDA</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaNCiudades</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Real</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Es la sumatoria de la ganancia de todas las ciudades</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaNTiendas</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Real</SPAN><SPAN class="SS0">  </SPAN><SPAN class="SS2">// Es la sumatoria de la ganancia de todas las tiendas</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaGlobal</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">real</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Es la venta total de toda la cadena de un día // SALIDA</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">c</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">t</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">e</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Iteradores</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS2">// Pidiendo la cantidad de ciudades</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la cantidad de ciudades en la que se encuentra la cadena: "</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nCiudades</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS11">ventaNCiudades</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS11">ventaGlobal</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS11">c</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Repetir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Registrando ciudades</SPAN><SPAN class="SS0">
+    
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"####################    CIUDAD  ["</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">c</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"/"</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">nCiudades</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"] ######################"</SPAN><SPAN class="SS0"> 
+        
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la cantidad de tiendas de la ciudad:"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0">  </SPAN><SPAN class="SS11">nTiendas</SPAN><SPAN class="SS0">
+        
+        </SPAN><SPAN class="SS11">ventaCiudad</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// reiniciando para la siguiente ciudad</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS11">ventaNTiendas</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0">
+        
+        </SPAN><SPAN class="SS11">t</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Repetir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// registrando las tiendas de la ciudad</SPAN><SPAN class="SS0">
+        
+            
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"- - - - - - - - - - - TIENDAS ["</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">t</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"/"</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">nTiendas</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"] de la ciudad ["</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">c</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"/"</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">nCiudades</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"]:  - - - - - - - - - - - - - "</SPAN><SPAN class="SS0">
+            
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la cantidad de empleados de la tienda"</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nEmpleados</SPAN><SPAN class="SS0">
+            
+            </SPAN><SPAN class="SS11">ventaTienda</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS11">e</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Repetir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// registrando ganancias por empleado de la tienda [",t,"/",nTiendas,"] de la ciudad [",c,"/",nCiudades,"]: </SPAN><SPAN class="SS0">
+                
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0">  </SPAN><SPAN class="SS6">"Ingrese las ventas del empleado ["</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">e</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"/"</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">nEmpleados</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"]: "</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaEmpleado</SPAN><SPAN class="SS0">
+                
+                </SPAN><SPAN class="SS11">ventaTienda</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaTienda</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaEmpleado</SPAN><SPAN class="SS0">
+            
+            </SPAN><SPAN class="SS11">e</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">e</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Hasta</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">que</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">e</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">&gt;</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nEmpleados</SPAN><SPAN class="SS0"> 
+            
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Las ganancias de la tienda ["</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">t</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"/"</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">nTiendas</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"] de la ciudad ["</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">c</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"/"</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">nCiudades</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"] fueron: "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaTienda</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0">  </SPAN><SPAN class="SS6">""</SPAN><SPAN class="SS0">
+            
+            </SPAN><SPAN class="SS11">ventaNTiendas</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaNTiendas</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaTienda</SPAN><SPAN class="SS0">
+            
+        </SPAN><SPAN class="SS11">t</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">t</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Hasta</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">que</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">t</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">&gt;</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nTiendas</SPAN><SPAN class="SS0"> 
+        
+        </SPAN><SPAN class="SS11">ventaCiudad</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaCiudad</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaNTiendas</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Las ganancias de la ciudad ["</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">c</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"/"</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">nCiudades</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"] fueron de: "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaCiudad</SPAN><SPAN class="SS0">
+        
+        </SPAN><SPAN class="SS11">ventaGlobal</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaGlobal</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaCiudad</SPAN><SPAN class="SS0">
+        
+    </SPAN><SPAN class="SS11">c</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">c</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Hasta</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">que</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">c</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">&gt;</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nCiudades</SPAN><SPAN class="SS0"> 
+    
+    </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#"</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"LA VENTA GLOBAL FUE DE: "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">ventaGlobal</SPAN><SPAN class="SS0">
+    
+    
+</SPAN><SPAN class="SS5">FinAlgoritmo</SPAN><SPAN class="SS0">
+</SPAN>
+</PRE></BODY></HTML>

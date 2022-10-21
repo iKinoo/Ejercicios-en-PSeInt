@@ -1,0 +1,11 @@
+C:\Users\rodri\OneDrive - Universidad Autonoma de Yucatan\Universidad\Semestre I\Algoritmia\Ejercicios en PSeInt\Ejercicios\e11
+
+
+en un salón de clase se tienen n estudiantes cada estudiante presenta 4 exámenes se requiere el algoritmo que calcule el promedio de calificación de cada estudiante y que encuentre el mayor promedio y el menor promedio
+
+
+Algoritmo que calcule para N personas lo que ahorran mensualmente en un año
+
+Imprimir el nombre de la persona y su ahorro
+
+Agregar el ahorro total, cuánto ahorraron en total N personas

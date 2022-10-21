@@ -1,0 +1,111 @@
+<HTML><HEAD>
+	<TITLE>e13-P-Canicas.psc</TITLE>
+	<STYLE type="text/css">
+		.SSD { color:#FFFFFF; background-color:#000000; }
+		.SS0 { color:#000000; background-color:#FFFFFF; }
+		.SS1 { color:#000000; background-color:#FFFFFF; }
+		.SS2 { font-style: italic; color:#969696; background-color:#FFFFFF; }
+		.SS3 { font-style: italic; color:#0000FF; background-color:#FFFFFF; }
+		.SS4 { color:#8E6B23; background-color:#FFFFFF; }
+		.SS5 { font-weight: bold; color:#000080; background-color:#FFFFFF; }
+		.SS6 { color:#FF0000; background-color:#FFFFFF; }
+		.SS7 { color:#FF0000; background-color:#FFFFFF; }
+		.SS8 { color:#DB70DB; background-color:#FFFFFF; }
+		.SS9 { color:#238E23; background-color:#FFFFFF; }
+		.SS10 { font-weight: bold; color:#000000; background-color:#FFFFFF; }
+		.SS11 { color:#000000; background-color:#FFFFFF; }
+		.SS12 { color:#FF0000; background-color:#F0F0F0; }
+		.SS13 { color:#000000; background-color:#FFFFFF; }
+		.SS14 { color:#DB70DB; background-color:#FFFFFF; }
+		.SS15 { color:#238E23; background-color:#FFFFFF; }
+		.SS16 { color:#000080; background-color:#FFFFFF; }
+		.SS17 { color:#42426F; background-color:#FFFFFF; }
+		.SS18 { color:#FF0000; background-color:#FFFFFF; }
+		.SS19 { color:#000000; background-color:#BFD8D8; }
+		.SS34 { font-weight: bold; color:#FF0000; background-color:#F0F0FF; }
+		.SS35 { font-weight: bold; color:#800000; background-color:#FFFFFF; }
+	</STYLE>
+</HEAD><BODY><PRE>
+<SPAN class="SS2">// Tenemos un grupo de personas, cada persona tiene una bolsa de canícas y las canícas pueden ser de tres colores, </SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS2">// solamente tres colores, 1, 2, 3; la cantidad de canícas en cada persona </SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS2">//no se conoce y puede ser diferente para cada usuario</SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS2">// se requiere el algoritmo que imprima el nombre de la persona, cuántas canícas tiene de cada color, </SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS2">// por cada persona, y también el total de canícas de cada color, el total global.    </SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS2">// cuántas canicas hay en cada bolsa</SPAN><SPAN class="SS0">
+
+</SPAN><SPAN class="SS5">Algoritmo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">sin_titulo</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">colorRojo</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">colorAzul</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">colorVerde</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// son los colores de las canícas</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nPersonas</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// es el numero de las personas // ENTRADA</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nombrePersona</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Caracter</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// es el nombre de la persona // ENTRADA</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nCanicas</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Es la cantidad de canicas que tiene la persona en la bolsa // ENTRADA</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">canica</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// Es la canica a la cual se le está preguntando el color // ENTRADA</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">totalRojo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// es el total global de canicas rojas // SALIDA</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">totalAzul</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// es el total global de canicas azules // SALIDA</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">totalVerde</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// es el total global de canicas verdes // SALIDA</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">i</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// iterador</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Definir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">j</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">como</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">entero</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS2">// iterador anidado</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS11">totalAzul</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS11">totalRojo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS11">totalVerde</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese el número de personas a evaluar: "</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nPersonas</SPAN><SPAN class="SS0">
+    
+    </SPAN><SPAN class="SS5">para</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">i</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">←</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">hasta</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nPersonas</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">con</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">paso</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+        
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"PERSONA ["</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">i</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"/"</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">nPersonas</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"]: "</SPAN><SPAN class="SS0">
+        
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese el nombre de la personas: "</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nombrePersona</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"Ingrese la cantidad de canicas que tiene la persona en la bolsa: "</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nCanicas</SPAN><SPAN class="SS0">
+        
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"INICIANDO CONTEO DE CANICAS DE "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nombrePersona</SPAN><SPAN class="SS0">
+        
+        </SPAN><SPAN class="SS11">colorAzul</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS11">colorRojo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS11">colorVerde</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">0</SPAN><SPAN class="SS0">
+        
+        </SPAN><SPAN class="SS5">para</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">j</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">←</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">hasta</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nCanicas</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">con</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">paso</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"¿De qué color es la canica ["</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">j</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"/"</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">nCanicas</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS6">"]:?"</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"[1] &lt;- Rojo; [2] &lt;- Azul; [3] &lt;- Verde "</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">canica</SPAN><SPAN class="SS0">
+                
+            </SPAN><SPAN class="SS5">Segun</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">canica</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS11">colorRojo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">colorRojo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS4">2</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS11">colorAzul</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">colorAzul</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS4">3</SPAN><SPAN class="SS10">:</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS11">colorVerde</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">colorVerde</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS4">1</SPAN><SPAN class="SS0">
+                
+                </SPAN><SPAN class="SS5">Fin</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Segun</SPAN><SPAN class="SS0">
+                    
+        </SPAN><SPAN class="SS5">FinPara</SPAN><SPAN class="SS0">
+                
+            </SPAN><SPAN class="SS11">totalRojo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">totalRojo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">colorRojo</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS11">totalAzul</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">totalAzul</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">colorAzul</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS11">totalVerde</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">=</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">totalVerde</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">+</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">colorVerde</SPAN><SPAN class="SS0">
+                
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"NOMBRE: "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">nombrePersona</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"CANICAS ROJAS: "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">colorRojo</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"CANICAS AZULES: "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">colorAzul</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"CANICAS VERDES: "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">colorVerde</SPAN><SPAN class="SS0"> 
+                
+        </SPAN><SPAN class="SS5">FinPara</SPAN><SPAN class="SS0">
+        
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">""</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"--------------------------------------------"</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Imprimir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"#### RESUMEN ####"</SPAN><SPAN class="SS0">
+            
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"CANICAS ROJAS GLOBALES: "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">totalRojo</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"CANICAS AZULES GLOBALES: "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">totalAzul</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">"CANICAS VERDES GLOBALES: "</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">totalVerde</SPAN><SPAN class="SS0"> 
+    
+</SPAN><SPAN class="SS5">FinAlgoritmo</SPAN><SPAN class="SS0">
+</SPAN>
+</PRE></BODY></HTML>
