@@ -28,8 +28,7 @@ Algoritmo sin_titulo
 	
 	Escribir "Ingrese el número de elementos que tendrá la serie de fibonacci"
 	leer nElementos
-	
-	
+		
 	anterior2 = 0
 	anterior1 = 1
 	
