@@ -15,23 +15,17 @@ Algoritmo sin_titulo
 	
 	
 	Dimension matrizOriginal[filas,columnas]
+	Dimension matrizTranspuesta[columnas, filas] // las filas ahora se vuelven columnas y las columns filas
 	
 	para f <- 1 hasta filas con paso 1 Hacer
 		para c <- 1 hasta columnas con paso 1 Hacer
 			Escribir "Ingrese el valor para [",f,",",c,"]: "
 			Leer matrizOriginal[f,c]
+			matrizTranspuesta[c,f] = matrizOriginal[f,c]
 		FinPara
 	FinPara
 	
 	// trabajando en la transpuesta
-	
-	Dimension matrizTranspuesta[columnas, filas] // las filas ahora se vuelven columnas y las columns filas
-	
-	para f <- 1 hasta columnas con paso 1 Hacer
-		para c <- 1 hasta filas con paso 1 Hacer
-			matrizTranspuesta[f,c] = matrizOriginal[c,f]
-		FinPara
-	FinPara
 	
 	Escribir "##### MATRIZ ORIGINAL ####"
 	
